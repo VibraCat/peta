@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/imatges/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/imatges/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/imatges/favicon/favicon-16x16.png">
+  <title>Rebenta les Bombolles!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rebenta les Bombolles!</h1>
+    <button id="restart-btn" style="display: none;">Torna a començar</button>
+  </header>
+  
+  <main id="bubble-container">
+    <!-- La graella de bombolles es generarà des de JavaScript -->
+  </main>
+
+  <footer>
+    Fes clic o toca les bombolles per rebentar-les!
+  </footer>
+
+  <script type="module">
+    import { detectarDispositiu } from './main.js';
+    import { initBubbleGame } from './bubbleGame.js';
+    let dispositiu = detectarDispositiu()
+    initBubbleGame(dispositiu);
+  </script>
+</body>
+</html>
