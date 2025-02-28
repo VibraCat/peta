@@ -114,7 +114,7 @@
         // Seleccionem un so aleatòriament
         const randomIndex = Math.floor(Math.random() * popSounds.length);
         const chosenSound = popSounds[randomIndex];
-        console.log("🚀 ~ onBubbleClick ~ popSounds[randomIndex]:", popSounds[randomIndex])
+
         chosenSound.currentTime = 0;
         chosenSound.volume = popSoundsVolum[randomIndex];
         chosenSound.play();
